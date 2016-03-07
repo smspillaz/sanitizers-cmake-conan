@@ -23,7 +23,7 @@ class SanitizersCMakeConan(ConanFile):
         os.unlink(zip_name)
 
     def package(self):
-        self.copy(pattern="*.cmake",
-                  dst="cmake/sanitizers-cmake",
+        self.copy(pattern="Find*.cmake",
+                  dst="",
                   src=os.path.join("sanitizers-cmake-master"),
                   keep_path=True)
